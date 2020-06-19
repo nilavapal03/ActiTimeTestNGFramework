@@ -1,31 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<<<<<<< HEAD
-<suite name="Suite">
-	<parameter name="Browser" value="Chrome"/>
-	<parameter name="URL" value="http://localhost/login.do"/>
-
-	<listeners>
-=======
 <suite name="ActiTimeFrameWork">
 <listeners>
->>>>>>> branch 'master' of https://github.com/nilavapal03/ActiTimeTestNGFramework.git
 		<listener
 			class-name="com.nilava.AutomationFramework.Listeners.Listener" />
 	</listeners>
-<<<<<<< HEAD
 
-	<test thread-count="5" name="ActiTimeTest">
-	<!-- <parameter name="URL" value="http://localhost/login.do"/> -->
-=======
-	
 	<test thread-count="5" name="ActiTimeAutomation">
 		<parameter name= "Browser" value= "Chrome"/>
 		<parameter name ="URL" value="http://localhost/login.do"/>
 		
-		
-		
->>>>>>> branch 'master' of https://github.com/nilavapal03/ActiTimeTestNGFramework.git
 		<classes>
 		
 			<class name="com.nilava.AutomationFramework.Tests.TC001" />
