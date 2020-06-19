@@ -1,6 +1,5 @@
 package com.nilava.AutomationFramework.Tests;
 
-
 /**
  * @author nilava
  */
@@ -13,16 +12,21 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.nilava.AutomationFramework.GenericUtils.Driver;
+import com.nilava.AutomationFramework.GenericUtils.ReusableMethods;
 import com.nilava.AutomationFramework.POM.LoginPage;
 
 public class TC001 {
-	// =================================Object creation starts Here=================================
+	// =================================Object creation starts
+	// Here=================================
 	Properties prop = new Properties();
 	LoginPage loginpage;
-	// =================================Object creation Ends=================================
+	ReusableMethods reuse= new ReusableMethods();
+	// =================================Object creation
+	// Ends=================================
 	{
 		try {
 			prop.load(new FileInputStream("./resourceLib/ConfigFile/config.properties"));
@@ -31,22 +35,34 @@ public class TC001 {
 		}
 	}
 
+	@Parameters({ "Browser" })
 	@BeforeTest
-	public void launchURL() {
-		Driver.launchBrowser(prop.getProperty("Browser"));
-		Driver.driver.get(prop.getProperty("URL"));
-
+	public void launchBrowser(String browserName) {
+		Driver.launchBrowser(browserName);
 	}
-	
+
 	@AfterTest
 	public void tearDown() {
 		Driver.driver.quit();
+	}
+
+	@Parameters({ "URL" })
+	@BeforeClass
+	public void setUp(String url) {
+		Driver.driver.get(url);
+		
+	}
+
+	@AfterClass
+	public void close() {
+		System.out.println("Close the execution");
 	}
 
 	@Test
 	public void loginActiTime() {
 		loginpage = new LoginPage();
 		loginpage.loginActiTime(prop.getProperty("userName"), prop.getProperty("PassWord"));
+		
 	}
 
 }

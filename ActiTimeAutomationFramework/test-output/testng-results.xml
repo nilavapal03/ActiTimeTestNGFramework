@@ -2,24 +2,46 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="11323" started-at="2020-06-16T16:50:09Z" finished-at="2020-06-16T16:50:20Z">
+  <suite name="ActiTimeFrameWork" duration-ms="37997" started-at="2020-06-19T18:05:03Z" finished-at="2020-06-19T18:05:41Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="11323" started-at="2020-06-16T16:50:09Z" finished-at="2020-06-16T16:50:20Z">
+    <test name="ActiTimeAutomation" duration-ms="37997" started-at="2020-06-19T18:05:03Z" finished-at="2020-06-19T18:05:41Z">
       <class name="com.nilava.AutomationFramework.Tests.TC001">
-        <test-method status="PASS" signature="launchURL()[pri:0, instance:com.nilava.AutomationFramework.Tests.TC001@47c62251]" name="launchURL" is-config="true" duration-ms="10192" started-at="2020-06-16T16:50:09Z" finished-at="2020-06-16T16:50:19Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.nilava.AutomationFramework.Tests.TC001@3bfdc050]" name="launchBrowser" is-config="true" duration-ms="12411" started-at="2020-06-19T18:05:03Z" finished-at="2020-06-19T18:05:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchURL -->
-        <test-method status="PASS" signature="loginActiTime()[pri:0, instance:com.nilava.AutomationFramework.Tests.TC001@47c62251]" name="loginActiTime" duration-ms="349" started-at="2020-06-16T16:50:19Z" finished-at="2020-06-16T16:50:20Z">
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.nilava.AutomationFramework.Tests.TC001@3bfdc050]" name="setUp" is-config="true" duration-ms="16823" started-at="2020-06-19T18:05:15Z" finished-at="2020-06-19T18:05:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://localhost/login.do]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginActiTime()[pri:0, instance:com.nilava.AutomationFramework.Tests.TC001@3bfdc050]" name="loginActiTime" duration-ms="509" started-at="2020-06-19T18:05:32Z" finished-at="2020-06-19T18:05:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginActiTime -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.nilava.AutomationFramework.Tests.TC001@47c62251]" name="tearDown" is-config="true" duration-ms="740" started-at="2020-06-16T16:50:20Z" finished-at="2020-06-16T16:50:20Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:com.nilava.AutomationFramework.Tests.TC001@3bfdc050]" name="close" is-config="true" duration-ms="2" started-at="2020-06-19T18:05:33Z" finished-at="2020-06-19T18:05:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.nilava.AutomationFramework.Tests.TC001@3bfdc050]" name="tearDown" is-config="true" duration-ms="8201" started-at="2020-06-19T18:05:33Z" finished-at="2020-06-19T18:05:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.nilava.AutomationFramework.Tests.TC001 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- ActiTimeAutomation -->
+  </suite> <!-- ActiTimeFrameWork -->
 </testng-results>
