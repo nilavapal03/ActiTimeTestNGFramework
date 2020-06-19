@@ -142,14 +142,16 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;parameter name=&quot;URL&quot; value=&quot;http://localhost/login.do&quot;/&gt;
+  &lt;parameter name=&quot;Browser&quot; value=&quot;Chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.nilava.AutomationFramework.Listeners.Listener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;ActiTimeTest&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.nilava.AutomationFramework.Tests.TC001&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- ActiTimeTest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -161,7 +163,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">ActiTimeTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -191,12 +193,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginActiTime')
 data.setCell(0, 2, 'com.nilava.AutomationFramework.Tests.TC001')
-data.setCell(0, 3, 349);
+data.setCell(0, 3, 271);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 349 ms</span>
+              <span class="suite-total-time">Total running time: 271 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -224,16 +226,20 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.nilava.AutomationFramework.Tests.TC001</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">launchURL</span>
+                <span class="method-name">launchURL(Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp(http://localhost/login.do)</span>
+                <span class="method-start">4691 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">loginActiTime</span>
-                <span class="method-start">10228 ms</span>
+                <span class="method-start">5077 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">10580 ms</span>
+                <span class="method-start">5351 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
