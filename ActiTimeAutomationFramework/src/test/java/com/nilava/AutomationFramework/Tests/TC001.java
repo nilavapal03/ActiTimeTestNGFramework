@@ -14,13 +14,23 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.nilava.AutomationFramework.GenericUtils.Driver;
+import com.nilava.AutomationFramework.GenericUtils.ReusableMethods;
 import com.nilava.AutomationFramework.POM.LoginPage;
 
 public class TC001 {
+
 	// ================= Object creation starts=================//
+
+	
+
 	Properties prop = new Properties();
 	LoginPage loginpage;
+	ReusableMethods reuse= new ReusableMethods();
 	// ================= Object creation Ends=================//
+
+	
+	
+
 	{
 		try {
 			prop.load(new FileInputStream("./resourceLib/ConfigFile/config.properties"));
@@ -31,9 +41,11 @@ public class TC001 {
 
 	@Parameters({ "Browser" })
 	@BeforeTest
-	public void launchURL(String browser) {
-		Driver.launchBrowser(browser);
+	public void launchBrowser(String browserName) {
+		Driver.launchBrowser(browserName);
+
 	}
+
 
 	@Parameters({ "URL" })
 	@BeforeClass
@@ -41,15 +53,25 @@ public class TC001 {
 		Driver.driver.get(url);
 	}
 
+
+
 	@AfterTest
 	public void tearDown() {
 		Driver.driver.quit();
+	}
+
+	
+
+	@AfterClass
+	public void close() {
+		System.out.println("Close the execution");
 	}
 
 	@Test
 	public void loginActiTime() {
 		loginpage = new LoginPage();
 		loginpage.loginActiTime(prop.getProperty("userName"), prop.getProperty("PassWord"));
+		
 	}
 
 }
